@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playwrite DE Grund', sans-serif;
+}
+
+body {
+    background: #1a1a1a; 
+    color: #f5f1ed;
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth background transition */
+}
+
+/* Container to ensure content stays within boundaries */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header with the logo and navbar in one line */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center; /* Align everything centrally */
+    align-items: center;
+    z-index: 10;
+    background: #70798c;
+    transition: background 0.3s ease; /* Smooth transition for the header background */
+}
+
+.logo {
+    font-size: 25px;
+    color: #f5f1ed;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition on logo hover */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Scale logo on hover */
+    color: #dad2bc; /* Change logo color on hover */
+}
+
+/* Navbar links with even spacing */
+.navbar a {
+    font-size: 18px;
+    color: #dad2bc;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color change and transform for hover */
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #f5f1ed; /* Light cream for hover */
+    transform: translateY(-5px); /* Move link up slightly on hover */
+}
+
+.home {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 0 10%; /* Padding to ensure it aligns with the container */
+    gap: 30%;
+}
+
+/* Ensure background image stays within container bounds */
+.background-image {
+    border: 5px solid #70798c;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth scale effect on hover */
+}
+
+.background-image:hover {
+    transform: scale(1.1); /* Scale-up effect when hovered */
+}
+
+.background-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.home-content {
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s ease; /* Smooth scale effect on hover */
+}
+
+.home-content:hover {
+    transform: scale(1.1); /* Scale-up effect on hover */
+}
+
+.home-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #f5f1ed;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition for smooth hover effect */
+}
+
+.home-content:hover h1 {
+    color: #dad2bc; /* Change color when the home content is hovered */
+}
+
+.home-content h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #70798c;
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.home-content:hover h3 {
+    color: #a99985; /* Change h3 color when hovered */
+}
+
+.home-content p {
+    font-size: 18px;
+    color: #dad2bc;
+    text-align: center;
+    max-width: 600px;
+    margin-top: 20px;
+    line-height: 1.5;
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.home-content:hover p {
+    color: #f5f1ed; /* Change paragraph color when home content is hovered */
+}
