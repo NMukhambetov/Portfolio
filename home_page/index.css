@@ -6,31 +6,27 @@
 }
 
 body {
-    background: #1a1a1a; 
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
     color: #f5f1ed;
-    transition: background 0.3s ease, color 0.3s ease; /* Smooth background transition */
 }
 
-/* Container to ensure content stays within boundaries */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.home_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-/* Header with the logo and navbar in one line */
 .header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 10%;
     display: flex;
-    justify-content: center; /* Align everything centrally */
+    justify-content: space-between;
     align-items: center;
-    z-index: 10;
     background: #70798c;
-    transition: background 0.3s ease; /* Smooth transition for the header background */
+    z-index: 10;
 }
 
 .logo {
@@ -38,53 +34,124 @@ body {
     color: #f5f1ed;
     text-decoration: none;
     font-weight: 600;
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition on logo hover */
+    transition: color 0.3s, transform 0.3s;
 }
 
 .logo:hover {
-    transform: scale(1.1); /* Scale logo on hover */
-    color: #dad2bc; /* Change logo color on hover */
+    transform: scale(1.1);
+    color: #dad2bc;
 }
 
-/* Navbar links with even spacing */
+.hamburger {
+    position: relative;
+    z-index: 10;
+}
+.navbar {
+    display: flex;
+}
+
+.hamburger,
+.toggler,
+.mobile_menu {
+    display: none;
+}
+
+.hamburger-icon {
+    cursor: pointer;
+}
+
+.mobile_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1a1a1a;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.mobile_menu a {
+    display: block;
+    color: #f5f1ed;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.mobile_menu a:hover {
+    color:#70798c;
+}
+
+.toggler:checked + .hamburger-icon + .mobile_menu {
+    display: block;
+}
+
 .navbar a {
     font-size: 18px;
     color: #dad2bc;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color change and transform for hover */
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.navbar a:hover, .navbar a.active {
-    color: #f5f1ed; /* Light cream for hover */
-    transform: translateY(-5px); /* Move link up slightly on hover */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #f5f1ed;
+    transition: width 0.3s, left 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.navbar a:hover{
+    color: #f5f1ed;
+    transform: translateY(-5px);
 }
 
 .home {
     display: flex;
     height: 100vh;
     align-items: center;
-    padding: 0 10%; /* Padding to ensure it aligns with the container */
     gap: 30%;
+    padding: 0 10%;
 }
 
-/* Ensure background image stays within container bounds */
 .background-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     border: 5px solid #70798c;
     border-radius: 25px;
     overflow: hidden;
-    transition: transform 0.3s ease; /* Smooth scale effect on hover */
+    transition: transform 0.3s, border 0.3s;
 }
 
 .background-image:hover {
-    transform: scale(1.1); /* Scale-up effect when hovered */
+    transform: translate(-5px, 0) scale(1.05);
+    border: none;
 }
 
 .background-image img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 25px;
+    transition: transform 0.3s;
+}
+
+.background-image:hover img {
+    transform: scale(1.05);
 }
 
 .home-content {
@@ -93,11 +160,47 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: transform 0.3s ease; /* Smooth scale effect on hover */
+    position: relative;
 }
 
-.home-content:hover {
-    transform: scale(1.1); /* Scale-up effect on hover */
+.home-content::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f5f1ed;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.home-content:hover::after {
+    opacity: 1;
+}
+
+.home-content h1,
+.home-content h3 {
+    position: relative;
+    text-align: center;
+}
+
+.home-content h1::after,
+.home-content h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #f5f1ed;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.home-content h1:hover::after,
+.home-content h3:hover::after {
+    transform: scaleX(1);
 }
 
 .home-content h1 {
@@ -105,22 +208,12 @@ body {
     font-weight: 700;
     color: #f5f1ed;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition for smooth hover effect */
-}
-
-.home-content:hover h1 {
-    color: #dad2bc; /* Change color when the home content is hovered */
 }
 
 .home-content h3 {
     font-size: 36px;
     font-weight: 700;
     color: #70798c;
-    transition: color 0.3s ease; /* Smooth color change on hover */
-}
-
-.home-content:hover h3 {
-    color: #a99985; /* Change h3 color when hovered */
 }
 
 .home-content p {
@@ -130,9 +223,398 @@ body {
     max-width: 600px;
     margin-top: 20px;
     line-height: 1.5;
-    transition: color 0.3s ease; /* Smooth transition for color */
 }
 
-.home-content:hover p {
-    color: #f5f1ed; /* Change paragraph color when home content is hovered */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #f5f1ed 0%, #dad2bc 100%);
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: background 0.3s, transform 0.3s, border 0.3s;
 }
+
+.btn:hover {
+    background: linear-gradient(135deg, #dad2bc 0%, #f5f1ed 100%);
+    transform: scale(1.05);
+    border: 1px solid #1a1a1a;
+}
+.family-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    overflow: hidden;
+    width: 100%;
+}
+.section-heading {
+    font-size: 36px;
+    color: #f5f1ed;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #f5f1ed;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.section-heading:hover::after {
+    transform: scaleX(1);
+}
+.carousel {
+    display: flex;
+    gap: 1.25rem; /* Более гибкий зазор между изображениями */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Скрываем скроллбар */
+    -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.family-photo {
+    flex: 0 0 80%;
+    max-width: 300px;
+    height: auto;
+    scroll-snap-align: start;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.family-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.family-photo:hover {
+    transform: scale(1.05);
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    background: linear-gradient(135deg, #f5f1ed 0%, #dad2bc 100%);
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: background 0.3s, transform 0.3s, border 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #dad2bc 0%, #f5f1ed 100%);
+    transform: scale(1.05);
+    border: 1px solid #1a1a1a;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-container h1 {
+    font-size: 36px;
+    color: #f5f1ed;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    background: #292929;
+}
+
+.card h3 {
+    font-size: 24px;
+    color: #f5f1ed;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #dad2bc;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.card .progress-bar {
+    background: #70798c;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 25px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.card .progress {
+    background: #f5f1ed;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    color: #1a1a1a;
+    transition: width 0.5s;
+}
+
+@keyframes load {
+    from {
+        width: 0;
+    }
+    to {
+        width: 85%;
+    }
+}
+.hobbies {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hobbi__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.hobbi__card {
+    background: #1a1a1a;
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s; 
+    width: 250px;
+    text-align: left;
+    perspective: 1000px; /* Enable 3D perspective */
+}
+
+.hobbi__card:hover {
+    transform: scale(1.1) translateZ(20px); /* Scale and move text closer */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+.hobbi_img1 {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s; 
+}
+
+.hobbi__card:hover .hobbi_img1 {
+    transform: scale(1.05);
+}
+
+.hobbi__card__info {
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.hobbi__card:hover .hobbi__card__info {
+    transform: translateZ(10px);
+}
+
+.hobbi__card__info__title {
+    font-size: 18px;
+    color: #f5f1ed;
+    margin-bottom: 10px;
+}
+
+.hobbi__card__info__main-text {
+    font-size: 14px;
+    color: #dad2bc;
+}
+
+
+.social-media {
+    text-align: center;
+    margin: 50px 0;
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background: #70798c;
+    text-align: center;
+    padding: 20px;
+    color: #f5f1ed;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 1235px) {
+    .home {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15%;
+        height: 70vh;
+    }
+
+    .background-image img {
+        width: 80%;
+    }
+
+    .card {
+        width: 80%;
+        margin: 10px auto;
+    }
+    .navbar {
+        display: flex; /* Показываем основное меню на более широких экранах */
+    }
+
+    .hamburger,
+    .toggler,
+    .mobile_menu {
+        display: none; /* Скрываем гамбургер и мобильное меню на экранах шире 431 пикселя */
+    }
+}
+
+@media (max-width: 785px) {
+    .home {
+        flex-direction: column;
+        margin-top: 30%;
+        align-items: flex-start; 
+        gap: 20px;
+        padding: 0 5%;
+        text-align: left;
+        height: auto;
+    }
+
+    .home-content {
+        max-width: 80%; 
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 5%;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .home-content h1 {
+        text-align: left;
+        font-size: 32px;
+    }
+
+    .home-content h3 {
+        text-align: left;
+        font-size: 26px;
+    }
+
+    .home-content p {
+        text-align: left;
+        font-size: 12px;
+        margin-top: 10px;
+        font-weight: 500;
+    }
+    .navbar {
+        display: flex; /* Показываем основное меню на более широких экранах */
+    }
+
+    .hamburger,
+    .toggler,
+    .mobile_menu {
+        display: none; /* Скрываем гамбургер и мобильное меню на экранах шире 431 пикселя */
+    }
+}
+
+@media (max-width: 431px) {
+    .navbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .toggler:checked + .hamburger-icon + .mobile_menu {
+        display: block;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .home-content h1{
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .background-image {
+        margin-top: 20px;
+    }
+}
+
