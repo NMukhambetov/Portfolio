@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Playwrite DE Grund', sans-serif;
 }
-
+html{
+    height: auto;
+}
 body {
     background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
     color: #f5f1ed;
@@ -25,7 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #70798c;
+    background: #1a1a1a;
     z-index: 10;
 }
 
@@ -114,11 +116,17 @@ body {
     left: 0;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #f5f1ed;
     transform: translateY(-5px);
 }
+.navbar a.active {
+    color: #f5f1ed;
+}
 
+.active::after {
+    background: #f5f1ed;
+}
 .home {
     display: flex;
     height: 100vh;
@@ -132,14 +140,14 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    border: 5px solid #70798c;
+    border: 5px solid #3a3a3a;
     border-radius: 25px;
     overflow: hidden;
     transition: transform 0.3s, border 0.3s;
 }
 
 .background-image:hover {
-    transform: translate(-5px, 0) scale(1.05);
+    transform: translate(-5px, 0) scale(1.005);
     border: none;
 }
 
@@ -213,7 +221,7 @@ body {
 .home-content h3 {
     font-size: 36px;
     font-weight: 700;
-    color: #70798c;
+    color: #8a8a8a;
 }
 
 .home-content p {
@@ -225,23 +233,7 @@ body {
     line-height: 1.5;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background: linear-gradient(135deg, #f5f1ed 0%, #dad2bc 100%);
-    color: #1a1a1a;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    transition: background 0.3s, transform 0.3s, border 0.3s;
-}
 
-.btn:hover {
-    background: linear-gradient(135deg, #dad2bc 0%, #f5f1ed 100%);
-    transform: scale(1.05);
-    border: 1px solid #1a1a1a;
-}
 .family-intro {
     display: flex;
     flex-direction: column;
@@ -274,10 +266,10 @@ body {
 }
 .carousel {
     display: flex;
-    gap: 1.25rem; /* Более гибкий зазор между изображениями */
+    gap: 1.25rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Скрываем скроллбар */
+    scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
@@ -366,7 +358,7 @@ body {
 }
 
 .card .progress-bar {
-    background: #70798c;
+    background: #8a8a8a;;
     border-radius: 5px;
     overflow: hidden;
     height: 25px;
@@ -406,25 +398,24 @@ body {
 
 .hobbi__card {
     background: #1a1a1a;
-    border-radius: 15px; 
-    overflow: hidden; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;  /* Slightly more rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow */
     transition: transform 0.3s, box-shadow 0.3s; 
-    width: 250px;
-    text-align: left;
-    perspective: 1000px; /* Enable 3D perspective */
+    width: 280px;  /* Slightly wider cards */
+    text-align: center; /* Center align for a modern feel */
+    padding-top: 15px;
 }
 
 .hobbi__card:hover {
-    transform: scale(1.1) translateZ(20px); /* Scale and move text closer */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    transform: translateY(-10px);  /* Hover effect raises the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Shadow effect on hover */
 }
 
 .hobbi_img1 {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    transition: transform 0.3s; 
+    width: 80px;  /* Smaller icon size */
+    margin-bottom: 20px;
+    transition: transform 0.3s;
 }
 
 .hobbi__card:hover .hobbi_img1 {
@@ -432,7 +423,7 @@ body {
 }
 
 .hobbi__card__info {
-    padding: 15px;
+    padding: 20px 15px; /* Increased padding for better spacing */
     transition: transform 0.3s;
 }
 
@@ -441,7 +432,8 @@ body {
 }
 
 .hobbi__card__info__title {
-    font-size: 18px;
+    font-size: 20px; /* Increased font size */
+    font-weight: bold; /* Bold titles */
     color: #f5f1ed;
     margin-bottom: 10px;
 }
@@ -449,6 +441,8 @@ body {
 .hobbi__card__info__main-text {
     font-size: 14px;
     color: #dad2bc;
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 
@@ -473,8 +467,9 @@ body {
 }
 
 footer {
-    background: #70798c;
+    background: #3a3a3a;
     text-align: center;
+    height: auto;
     padding: 20px;
     color: #f5f1ed;
 }
@@ -483,7 +478,6 @@ footer p {
     margin: 0;
 }
 
-/* Медиа-запросы для адаптивного дизайна */
 @media (max-width: 1235px) {
     .home {
         flex-direction: column;
@@ -501,13 +495,13 @@ footer p {
         margin: 10px auto;
     }
     .navbar {
-        display: flex; /* Показываем основное меню на более широких экранах */
+        display: flex;
     }
 
     .hamburger,
     .toggler,
     .mobile_menu {
-        display: none; /* Скрываем гамбургер и мобильное меню на экранах шире 431 пикселя */
+        display: none;
     }
 }
 
@@ -561,13 +555,13 @@ footer p {
         font-weight: 500;
     }
     .navbar {
-        display: flex; /* Показываем основное меню на более широких экранах */
+        display: flex;
     }
 
     .hamburger,
     .toggler,
     .mobile_menu {
-        display: none; /* Скрываем гамбургер и мобильное меню на экранах шире 431 пикселя */
+        display: none;
     }
 }
 
