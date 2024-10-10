@@ -3,45 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Nurtas Mukhambetov - Computer Science student showcasing skills, family, hobbies, and contact information.">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
-
-    <title>Portfolio</title>
+    <title>Portfolio - Nurtas Mukhambetov</title>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">MNM</a>
-        
-        <div class="hamburger">
-            <input type="checkbox" class="toggler" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger-icon">
-                <img src="assets/hamburger.svg" alt="Hamburger Menu">
-            </label>
-            <div class="mobile_menu" id="mobile-menu">
-                <a href="/index/index.html" class="active">Home</a>
-                <a href="/family/family.html">Family</a>
-                <a href="/education/education.html">Education</a>
-                <a href="/hobbies/hobbies.html">Hobbies</a>
-                <a href="/contact/contact.html">Contact</a>
-            </div>
-        </div>        
+        <div class="header__container container">
+            <a href="#" class="header__logo">MNM</a>
+            <div class="header__hamburger">
+                <input type="checkbox" class="header__toggler" id="menu-toggle">
+                <label for="menu-toggle" class="header__hamburger-icon" aria-label="Toggle navigation menu">
+                    <img src="assets/hamburger.svg" alt="Hamburger Menu">
+                </label>
+                <nav class="header__mobile-menu" id="mobile-menu">
+                    <a href="/index/index.html" class="header__mobile-link header__mobile-link--active">Home</a>
+                    <a href="/family/family.html" class="header__mobile-link">Family</a>
+                    <a href="/education/education.html" class="header__mobile-link">Education</a>
+                    <a href="/hobbies/hobbies.html" class="header__mobile-link">Hobbies</a>
+                    <a href="/contact/contact.html" class="header__mobile-link">Contact</a>
+                </nav>
+            </div>        
 
-        <nav class="navbar">
-            <a href="/index/index.html" class="active">Home</a>
-            <a href="/family/family.html">Family</a>
-            <a href="/education/education.html">Education</a>
-            <a href="/hobbies/hobbies.html">Hobbies</a>
-            <a href="/contact/contact.html">Contact</a>
-        </nav>
+            <nav class="header__navbar">
+                <a href="/index/index.html" class="header__nav-link header__nav-link--active">Home</a>
+                <a href="/family/family.html" class="header__nav-link">Family</a>
+                <a href="/education/education.html" class="header__nav-link">Education</a>
+                <a href="/hobbies/hobbies.html" class="header__nav-link">Hobbies</a>
+                <a href="/contact/contact.html" class="header__nav-link">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main class="home">
-        <div class="home_container">
-            <div class="home-content">
+        <div class="container home__container">
+            <div class="home__content">
                 <h1>Hi, I'm Nurtas Mukhambetov</h1>
                 <h3>STUDENT</h3>
                 <p>I am an 18-year-old second-year Computer Science student from Atyrau, 
@@ -49,105 +49,129 @@
                     I enjoy working on web development projects.</p>
                 <a href="mailto:230107098@sdu.edu.kz" class="btn">My Email</a>
             </div>
-            <div class="background-image">
-                <img src="assets/stiker.webp" alt="Profile Picture" />
+            <div class="home__background-image">
+                <img src="assets/stiker.webp" alt="Profile Picture" loading="lazy" />
             </div>
         </div>
     </main>
 
     <section class="family-intro">
-        <h2 class="section-heading">My Family</h2>
-        <div class="carousel">
-            <div class="family-photo"><img src="assets/family1.jpg" alt="Family Photo 1"></div>
-            <div class="family-photo"><img src="assets/family2.jpg" alt="Family Photo 2"></div>
-            <div class="family-photo"><img src="assets/family3.jpg" alt="Family Photo 3"></div>
-            <div class="family-photo"><img src="assets/family4.jpg" alt="Family Photo 4"></div>
-            <div class="family-photo"><img src="assets/family5.jpg" alt="Family Photo 5"></div>
-            <div class="family-photo"><img src="assets/family6.jpg" alt="Family Photo 6"></div>
+        <div class="container family-intro__container">
+            <h2 class="section-heading">My Family</h2>
+            <div class="family-intro__carousel carousel">
+                <div class="carousel__photo">
+                    <img src="assets/family1.jpg" alt="Family Photo 1" loading="lazy">
+                </div>
+                <div class="carousel__photo">
+                    <img src="assets/family2.jpg" alt="Family Photo 2" loading="lazy">
+                </div>
+                <div class="carousel__photo">
+                    <img src="assets/family3.jpg" alt="Family Photo 3" loading="lazy">
+                </div>
+                <div class="carousel__photo">
+                    <img src="assets/family4.jpg" alt="Family Photo 4" loading="lazy">
+                </div>
+                <div class="carousel__photo">
+                    <img src="assets/family5.jpg" alt="Family Photo 5" loading="lazy">
+                </div>
+                <div class="carousel__photo">
+                    <img src="assets/family6.jpg" alt="Family Photo 6" loading="lazy">
+                </div>
+            </div>
+            <a href="/family/family.html" class="btn">Family Info</a>
         </div>
-        <a href="/family/family.html" class="btn">Family info</a>
     </section>
 
-    <section class="card-container">
-        <h2 class="section-heading">My Skills</h2>
-        <div class="card">
-            <h3>Web Development</h3>
-            <p>Building responsive and user-friendly websites using HTML, CSS, JavaScript, and modern frameworks.</p>
-            <div class="progress-bar">
-                <div class="progress" style="width: 85%;">85%</div>
+    <section class="skills">
+        <div class="container skills__container">
+            <h2 class="section-heading">My Skills</h2>
+            <div class="skills__card">
+                <h3>Web Development</h3>
+                <p>Building responsive and user-friendly websites using HTML, CSS, JavaScript, and modern frameworks.</p>
+                <div class="skills__progress-bar">
+                    <div class="skills__progress" style="width: 85%;">85%</div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <h3>Problem Solving</h3>
-            <p>Efficiently solving algorithmic problems and optimizing solutions through computational thinking.</p>
-            <div class="progress-bar">
-                <div class="progress" style="width: 90%;">90%</div>
+            <div class="skills__card">
+                <h3>Problem Solving</h3>
+                <p>Efficiently solving algorithmic problems and optimizing solutions through computational thinking.</p>
+                <div class="skills__progress-bar">
+                    <div class="skills__progress" style="width: 90%;">90%</div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <h3>Team Collaboration</h3>
-            <p>Working in diverse teams to build innovative solutions and foster professional growth. I believe one day I would be a CEO.</p>
-            <div class="progress-bar">
-                <div class="progress" style="width: 75%;">75%</div>
+            <div class="skills__card">
+                <h3>Team Collaboration</h3>
+                <p>Working in diverse teams to build innovative solutions and foster professional growth. I aspire to be a CEO one day.</p>
+                <div class="skills__progress-bar">
+                    <div class="skills__progress" style="width: 75%;">75%</div>
+                </div>
             </div>
+            <a href="/education/education.html" class="btn">Education Info</a>
         </div>
-        <a href="/education/education.html" class="btn">Education info</a>
     </section>
+
     <section class="hobbies">
-        <h2 class="section-heading">My Hobbies</h2>
-        <div class="hobbi__container">
-            <div class="hobbi__card">
-                <img src="assets/cooking-svgrepo-com.svg" alt="Hobby 1" class="hobbi_img1">
-                <div class="hobbi__card__info">
-                    <div class="hobbi__card__info__title">Cooking</div>
-                    <div class="hobbi__card__info__main-text">I enjoy experimenting with new recipes and creating delicious meals that bring joy to my family and friends.</div>
+        <div class="container">
+            <h2 class="section-heading">My Hobbies</h2>
+            <div class="hobbies__container">
+                <div class="hobbies__card">
+                    <img src="assets/cooking-svgrepo-com.svg" alt="Cooking" class="hobbies__image" loading="lazy">
+                    <div class="hobbies__info">
+                        <h3 class="hobbies__title">Cooking</h3>
+                        <p class="hobbies__description">I enjoy experimenting with new recipes and creating delicious meals that bring joy to my family and friends.</p>
+                    </div>
+                </div>
+                <div class="hobbies__card">
+                    <img src="assets/icons8-реал-мадрид.svg" alt="Football" class="hobbies__image" loading="lazy">
+                    <div class="hobbies__info">
+                        <h3 class="hobbies__title">Football</h3>
+                        <p class="hobbies__description">Football is not just a game; it’s a passion! I love the thrill of the match and the camaraderie it brings with my teammates.</p>
+                    </div>
+                </div>
+                <div class="hobbies__card">
+                    <img src="assets/anime-and-manga-svgrepo-com (1).svg" alt="Watch Anime" class="hobbies__image" loading="lazy">
+                    <div class="hobbies__info">
+                        <h3 class="hobbies__title">Watch Anime</h3>
+                        <p class="hobbies__description">I love immersing myself in captivating stories and stunning animation, exploring the diverse worlds created by talented artists.</p>
+                    </div>
+                </div>
+                <div class="hobbies__card">
+                    <img src="assets/south-korea-svgrepo-com.svg" alt="Watch Dorama" class="hobbies__image" loading="lazy">
+                    <div class="hobbies__info">
+                        <h3 class="hobbies__title">Watch Dorama</h3>
+                        <p class="hobbies__description">Dramas take me on emotional journeys through engaging plots and relatable characters, allowing me to escape into different cultures and experiences.</p>
+                    </div>
                 </div>
             </div>
-            <div class="hobbi__card">
-                <img src="assets/icons8-реал-мадрид.svg" alt="Hobby 2" class="hobbi_img1">
-                <div class="hobbi__card__info">
-                    <div class="hobbi__card__info__title">Football</div>
-                    <div class="hobbi__card__info__main-text">Football is not just a game; it’s a passion! I love the thrill of the match and the camaraderie it brings with my teammates.</div>
-                </div>
-            </div>
-            <div class="hobbi__card">
-                <img src="assets/anime-and-manga-svgrepo-com (1).svg" alt="Hobby 3" class="hobbi_img1">
-                <div class="hobbi__card__info">
-                    <div class="hobbi__card__info__title">Watch Anime</div>
-                    <div class="hobbi__card__info__main-text">I love immersing myself in captivating stories and stunning animation, exploring the diverse worlds created by talented artists.</div>
-                </div>
-            </div>
-            <div class="hobbi__card">
-                <img src="assets/south-korea-svgrepo-com.svg" alt="Hobby 4" class="hobbi_img1">
-                <div class="hobbi__card__info">
-                    <div class="hobbi__card__info__title">Watch Dorama</div>
-                    <div class="hobbi__card__info__main-text">Dramas take me on emotional journeys through engaging plots and relatable characters, allowing me to escape into different cultures and experiences.</div>
-                </div>
-            </div>
+            <a href="/hobbies/hobbies.html" class="btn">Hobbies Info</a>
         </div>
-        <a href="/hobbies/hobbies.html" class="btn">Hobbies info</a>
     </section>    
+
     <section class="social-media">
-        <h2 class="section-heading">Connect with Me</h2>
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">
-                <i class='bx bxl-linkedin-square' style='color:#9a9a9a;font-size: 48px;'></i>
-            </a>
-            <a href="https://github.com/yourprofile" target="_blank" class="social-icon">
-                <i class='bx bxl-github' style='color:#9a9a9a;font-size: 48px;'></i>
-            </a>
-            <a href="https://t.me/yourtelegram" target="_blank" class="social-icon">
-                <i class='bx bxl-telegram' style='color:#9a9a9a;font-size: 48px;'></i>
-            </a>
-            <a href="https://instagram.com/yourprofile" target="_blank" class="social-icon">
-                <i class='bx bxl-instagram' style='color:#9a9a9a;font-size: 48px;'></i>
-            </a>
+        <div class="container social-media__container">
+            <h2 class="section-heading">Connect with Me</h2>
+            <div class="social-media__icons">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="social-media__icon" aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin-square' style='color:#9a9a9a; font-size: 48px;'></i>
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-media__icon" aria-label="GitHub">
+                    <i class='bx bxl-github' style='color:#9a9a9a; font-size: 48px;'></i>
+                </a>
+                <a href="https://t.me/yourtelegram" target="_blank" rel="noopener noreferrer" class="social-media__icon" aria-label="Telegram">
+                    <i class='bx bxl-telegram' style='color:#9a9a9a; font-size: 48px;'></i>
+                </a>
+                <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-media__icon" aria-label="Instagram">
+                    <i class='bx bxl-instagram' style='color:#9a9a9a; font-size: 48px;'></i>
+                </a>
+            </div>
+            <a href="/contact/contact.html" class="btn">Contact Info</a>
         </div>
-        <a href="/contact/contact.html" class="btn">Contact info</a>
     </section>
-    
-    <footer>
-        <p>&copy; 2024 Nurtas Mukhambetov. All rights reserved.</p>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2024 Nurtas Mukhambetov. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

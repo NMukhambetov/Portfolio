@@ -3,136 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Nurtas Mukhambetov - Computer Science student showcasing skills, family, hobbies, and contact information.">
     <link rel="stylesheet" href="contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Portfolio</title>
+    <title>Portfolio - Nurtas Mukhambetov</title>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">MNM</a>
-        
-        <div class="hamburger">
-            <input type="checkbox" class="toggler" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger-icon">
-                <img src="assets/hamburger.svg" alt="Hamburger Menu">
-            </label>
-            <div class="mobile_menu" id="mobile-menu">
-                <a href="/index/index.html">Home</a>
-                <a href="/family/family.html">Family</a>
-                <a href="/education/education.html">Education</a>
-                <a href="/hobbies/hobbies.html">Hobbies</a>
-                <a href="/contact/contact.html" class="active">Contact</a>
-            </div>
-        </div>        
+        <div class="header__container container">
+            <a href="#" class="header__logo">MNM</a>
+            <div class="header__hamburger">
+                <input type="checkbox" class="header__toggler" id="menu-toggle">
+                <label for="menu-toggle" class="header__hamburger-icon" aria-label="Toggle navigation menu">
+                    <img src="assets/hamburger.svg" alt="Hamburger Menu">
+                </label>
+                <nav class="header__mobile-menu" id="mobile-menu">
+                    <a href="/index/index.html" class="header__mobile-link header__mobile-link--active">Home</a>
+                    <a href="/family/family.html" class="header__mobile-link">Family</a>
+                    <a href="/education/education.html" class="header__mobile-link">Education</a>
+                    <a href="/hobbies/hobbies.html" class="header__mobile-link">Hobbies</a>
+                    <a href="/contact/contact.html" class="header__mobile-link">Contact</a>
+                </nav>
+            </div>        
 
-        <nav class="navbar">
-            <a href="/index/index.html">Home</a>
-            <a href="/family/family.html">Family</a>
-            <a href="/education/education.html">Education</a>
-            <a href="/hobbies/hobbies.html">Hobbies</a>
-            <a href="/contact/contact.html" class="active">Contact</a>
-        </nav>
+            <nav class="header__navbar">
+                <a href="/index/index.html" class="header__nav-link header__nav-link--active">Home</a>
+                <a href="/family/family.html" class="header__nav-link">Family</a>
+                <a href="/education/education.html" class="header__nav-link">Education</a>
+                <a href="/hobbies/hobbies.html" class="header__nav-link">Hobbies</a>
+                <a href="/contact/contact.html" class="header__nav-link">Contact</a>
+            </nav>
+        </div>
     </header>
+
     <section class="atyrau">
-        <div class="atyrau_container">
+        <div class="atyrau__container container">
             <div class="atyrau__image">
-                <img src="assets/at.jpg" alt="Atyrau City">
+                <img src="assets/at.jpg" alt="Atyrau City" loading="lazy">
             </div>
             <div class="atyrau__text-part">
-                <div class="atyrau__text-part__title" id="section-heading">Atyrau is my home</div>
+                <div class="atyrau__text-part__title" id="atyrau-heading">Atyrau is my home</div>
                 <h2 class="atyrau__text-part__loc">Location: Atyrau, Kazakhstan</h2>
                 <p class="atyrau__text-part__main-text">
                     Atyrau holds a special place in my heart. Nestled on the banks of the Ural River, it’s not just a city; it’s where I have built my roots, made lasting memories, and embraced the vibrant culture of Kazakhstan.
                 </p>
                 <p class="atyrau__full-address">Full Address: 123 Main St, Atyrau, Kazakhstan</p>
-                <div class="button-container">
-                    <button class="map-button">
+                <div class="atyrau__button-container button-container">
+                    <a href="https://maps.google.com/?q=123+Main+St,+Atyrau,+Kazakhstan" target="_blank" rel="noopener noreferrer" class="atyrau__map-button map-button">
                         <i class='bx bx-search-alt' style='color:#9a9a9a'></i>
                         View on the map
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
     
-    <div class="kaskelen">
-        <div class="kaskelen_container">
+    <section class="kaskelen">
+        <div class="kaskelen__container container">
             <div class="kaskelen__text-part">
-                <div class="kaskelen__text-part__title" id="section-heading">Kaskelen student home</div>
+                <div class="kaskelen__text-part__title" id="kaskelen-heading">Kaskelen student home</div>
                 <h2 class="kaskelen__text-part__loc">Location: Kaskelen, Kazakhstan</h2>
                 <p class="kaskelen__text-part__main-text">
                     Kaskelen is where I spent my formative years as a student. The energy of learning and growth here shaped who I am today. From late-night study sessions to unforgettable friendships, Kaskelen will always remind me of my journey toward success.
                 </p>
                 <p class="kaskelen__full-address">Full Address: 456 Elm St, Kaskelen, Kazakhstan</p>
-                <div class="button-container">
-                    <button class="map-button">
+                <div class="kaskelen__button-container button-container">
+                    <a href="https://maps.google.com/?q=456+Elm+St,+Kaskelen,+Kazakhstan" target="_blank" rel="noopener noreferrer" class="kaskelen__map-button map-button">
                         <i class='bx bx-search-alt' style='color:#9a9a9a'></i>
                         View on the map
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="kaskelen__image">
-                <img src="assets/kas.jpg" alt="Kaskelen City">
+                <img src="assets/kas.jpg" alt="Kaskelen City" loading="lazy">
             </div>
-        </div>
-    </div>
-    
-    <section class="contact-container">
-        <div class="contact-info">
-            <h3>— My contacts</h3>
-            <h1>Let’s <span class="highlight">Connect & Collaborate</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-            <ul>
-                <li><i class="icon phone"></i> +7 (775) 749-0850</li>
-                <li><i class="icon email"></i> 230107098@sdu.edu.kz</li>
-            </ul>
-        </div>
-    
-        <div class="social-media">
-            <div class="social-icons">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">
-                    <i class='bx bxl-linkedin-square' style='color:#9a9a9a;font-size: 48px;'></i>
-                </a>
-                <a href="https://github.com/yourprofile" target="_blank" class="social-icon">
-                    <i class='bx bxl-github' style='color:#9a9a9a;font-size: 48px;'></i>
-                </a>
-                <a href="https://t.me/yourtelegram" target="_blank" class="social-icon">
-                    <i class='bx bxl-telegram' style='color:#9a9a9a;font-size: 48px;'></i>
-                </a>
-                <a href="https://instagram.com/yourprofile" target="_blank" class="social-icon">
-                    <i class='bx bxl-instagram' style='color:#9a9a9a;font-size: 48px;'></i>
-                </a>
-            </div>
-        </div>
-    
-        <div class="contact-form">
-            <form>
-                <div class="form-group">
-                    <input type="text" placeholder="First Name *" required>
-                    <input type="text" placeholder="Last Name *" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email *" required>
-                    <input type="tel" placeholder="Phone Number *" required>
-                </div>
-                <div class="form-group full-width">
-                    <input type="text" placeholder="Subject *" required>
-                </div>
-                <div class="form-group full-width">
-                    <textarea placeholder="Message *" required></textarea>
-                </div>
-                <div class="form-group full-width">
-                    <button type="submit"><i class="icon send"></i> Send Message</button>
-                </div>
-            </form>
         </div>
     </section>
     
-    <footer>
-        <p>&copy; 2024 Nurtas Mukhambetov. All rights reserved.</p>
+    <section class="contact">
+        <div class="contact__container container">
+            <div class="contact__info">
+                <h3>— My contacts</h3>
+                <h1>Let’s <span class="contact__highlight">Connect & Collaborate</span></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                <ul class="contact__details">
+                    <li><i class="bx bx-phone icon phone"></i> +7 (775) 749-0850</li>
+                    <li><i class="bx bx-envelope icon email"></i> 230107098@sdu.edu.kz</li>
+                </ul>
+            </div>
+        
+            <div class="contact__social-media social-media">
+                <div class="social-media__icons">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="social-media__icon" aria-label="LinkedIn">
+                        <i class='bx bxl-linkedin-square' style='color:#9a9a9a;font-size: 48px;'></i>
+                    </a>
+                    <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-media__icon" aria-label="GitHub">
+                        <i class='bx bxl-github' style='color:#9a9a9a;font-size: 48px;'></i>
+                    </a>
+                    <a href="https://t.me/yourtelegram" target="_blank" rel="noopener noreferrer" class="social-media__icon" aria-label="Telegram">
+                        <i class='bx bxl-telegram' style='color:#9a9a9a;font-size: 48px;'></i>
+                    </a>
+                    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-media__icon" aria-label="Instagram">
+                        <i class='bx bxl-instagram' style='color:#9a9a9a;font-size: 48px;'></i>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="contact__form contact-form">
+                <form>
+                    <div class="contact-form__group form-group">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" placeholder="First Name *" required>
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" placeholder="Last Name *" required>
+                    </div>
+                    <div class="contact-form__group form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="Email *" required>
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" placeholder="Phone Number *" required>
+                    </div>
+                    <div class="contact-form__group form-group full-width">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" placeholder="Subject *" required>
+                    </div>
+                    <div class="contact-form__group form-group full-width">
+                        <label for="message">Message *</label>
+                        <textarea id="message" placeholder="Message *" required></textarea>
+                    </div>
+                    <div class="contact-form__group form-group full-width">
+                        <button type="submit" class="contact-form__submit-button">
+                            <i class="bx bx-send icon send"></i> Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer__container container">
+            <p>&copy; 2024 Nurtas Mukhambetov. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

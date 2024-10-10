@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playwrite DE Grund', sans-serif;
+}
+html{
+    height: auto;
+}
+body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    color: #f5f1ed;
+}
+
+.home_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+}
+
+.logo {
+    font-size: 25px;
+    color: #f5f1ed;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: #dad2bc;
+}
+
+.hamburger {
+    position: relative;
+    z-index: 10;
+}
+.navbar {
+    display: flex;
+}
+
+.hamburger,
+.toggler,
+.mobile_menu {
+    display: none;
+}
+
+.hamburger-icon {
+    cursor: pointer;
+}
+
+.mobile_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1a1a1a;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.mobile_menu a {
+    display: block;
+    color: #f5f1ed;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.mobile_menu a:hover {
+    color:#70798c;
+}
+
+.toggler:checked + .hamburger-icon + .mobile_menu {
+    display: block;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #dad2bc;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #f5f1ed;
+    transition: width 0.3s, left 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.navbar a:hover {
+    color: #f5f1ed;
+    transform: translateY(-5px);
+}
+.navbar a.active {
+    color: #f5f1ed;
+}
+
+.active::after {
+    background: #f5f1ed;
+}
+.hobby-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+}
+
+.hobby-card {
+    display: flex;
+    align-items: center;
+    background-color: #1b1b1b;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+}
+
+.hobby-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.hobby-content {
+    max-width: 600px;
+}
+
+.hobby-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hobby-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
