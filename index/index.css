@@ -138,7 +138,7 @@ body {
 
 .header__mobile-link:hover,
 .header__mobile-link--active {
-    color: #70798c;
+    color: #dad2bc;
 }
 
 .header__toggler:checked ~ .header__hamburger-icon + .header__mobile-menu {

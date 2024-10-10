@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playwrite DE Grund', sans-serif;
+}
+
+html {
+    height: auto;
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    color: #dad2bc;
+}
+
+.container {
+    width: 100%;
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    z-index: 1000;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__logo {
+    font-size: 25px;
+    color: #f5f1ed;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.header__logo:hover {
+    transform: scale(1.1);
+    color: #dad2bc;
+}
+
+.header__navbar {
+    display: flex;
+}
+
+.header__nav-link {
+    font-size: 18px;
+    color: #dad2bc;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.header__nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #f5f1ed;
+    transition: width 0.3s, left 0.3s;
+}
+
+.header__nav-link:hover::after,
+.header__nav-link--active::after {
+    width: 100%;
+    left: 0;
+}
+
+.header__nav-link:hover {
+    color: #f5f1ed;
+    transform: translateY(-5px);
+}
+
+.header__nav-link--active {
+    color: #f5f1ed;
+}
+
+.header__hamburger {
+    position: relative;
+    display: none;
+}
+
+.header__hamburger-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.header__toggler {
+    display: none;
+}
+
+.header__hamburger-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.header__mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1a1a1a;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+}
+
+.header__mobile-link {
+    display: block;
+    color: #f5f1ed;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.header__mobile-link:hover,
+.header__mobile-link--active {
+    color: #dad2bc;
+}
+
+.header__toggler:checked ~ .header__hamburger-icon + .header__mobile-menu {
+    display: flex;
+}
+
+.skills {
+    background: #1a1a1a;
+    padding: 4rem 0;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.skills__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills__card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.skills__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    background: #292929;
+}
+
+.skills__card h3 {
+    font-size: 24px;
+    color: #f5f1ed;
+    margin-bottom: 10px;
+}
+
+.skills__card p {
+    color: #dad2bc;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.skills__progress-bar {
+    background: #8a8a8a;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 25px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.skills__progress {
+    background: #f5f1ed;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    color: #1a1a1a;
+    transition: width 0.5s;
+}
+.roadmap {
+    padding: 4rem 0;
+    background: #1a1a1a;
+    color: #dad2bc;
+}
+
+.roadmap__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-heading {
+    font-size: 36px;
+    color: #f5f1ed;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #f5f1ed;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.section-heading:hover::after {
+    transform: scaleX(1);
+}
+.roadmap__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.roadmap__item {
+    background: #2c2c2c;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.roadmap__item:hover {
+    transform: translateY(-10px);
+    box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.4), 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.roadmap__image img {
+    width: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.roadmap__content__top-part, .roadmap__content__bottom-part {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    text-align: left;
+    align-items: center;
+}
+
+.roadmap__content__top-part h3, .roadmap__content__top-part p,
+.roadmap__content__bottom-part p {
+    margin: 0;
+    align-items: center;
+}
+
+.roadmap__content__top-part h3 .name, .roadmap__content__top-part p .time, 
+.roadmap__content__bottom-part p .location {
+    font-size: 18px;
+    color: #f5f1ed;
+    padding-left: 5px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    color: #dad2bc;
+}
+
+.social-icon i {
+    vertical-align: middle;
+}
+
+span.name {
+    font-size: 18px;
+    color: #e3e0d3;
+}
+
+span.time {
+    font-size: 19px;
+    color: #9fa8da;
+}
+
+span.location {
+    font-size: 19px;
+    color: #ffccbc;
+    padding-right: 15px;
+}
+
+.footer {
+    background: #3a3a3a;
+    text-align: center;
+    padding: 20px 0;
+    color: #f5f1ed;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media (max-width: 431px){
+    .header__navbar {
+        display: none; 
+    }
+
+    .header__hamburger {
+        display: flex;
+    }
+
+    .header__mobile-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .header__toggler:checked ~ .header__hamburger-icon + .header__mobile-menu {
+        display: flex; 
+    }
+    .roadmap__content__top-part h3 .name, .roadmap__content__top-part p .time, 
+    .roadmap__content__bottom-part p .location {
+        font-size: 18px;
+    }
+    .roadmap__content__top-part, .roadmap__content__bottom-part {
+        flex-direction: column;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
