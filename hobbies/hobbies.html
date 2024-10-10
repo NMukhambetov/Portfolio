@@ -3,79 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Nurtas Mukhambetov - Computer Science student showcasing skills, family, hobbies, and contact information.">
     <link rel="stylesheet" href="hobbies.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
-
-    <title>Portfolio</title>
+    <title>Portfolio - Nurtas Mukhambetov</title>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">MNM</a>
-        
-        <div class="hamburger">
-            <input type="checkbox" class="toggler" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger-icon">
-                <img src="assets/hamburger.svg" alt="Hamburger Menu">
-            </label>
-            <div class="mobile_menu" id="mobile-menu">
-                <a href="/index/index.html">Home</a>
-                <a href="/family/family.html">Family</a>
-                <a href="/education/education.html">Education</a>
-                <a href="/hobbies/hobbies.html" class="active">Hobbies</a>
-                <a href="/contact/contact.html">Contact</a>
-            </div>
-        </div>        
+        <div class="header__container container">
+            <a href="#" class="header__logo">MNM</a>
+            <div class="header__hamburger">
+                <input type="checkbox" class="header__toggler" id="menu-toggle">
+                <label for="menu-toggle" class="header__hamburger-icon" aria-label="Toggle navigation menu">
+                    <img src="assets/hamburger.svg" alt="Hamburger Menu">
+                </label>
+                <nav class="header__mobile-menu" id="mobile-menu">
+                    <a href="/index/index.html" class="header__mobile-link">Home</a>
+                    <a href="/family/family.html" class="header__mobile-link">Family</a>
+                    <a href="/education/education.html" class="header__mobile-link">Education</a>
+                    <a href="/hobbies/hobbies.html" class="header__mobile-link header__mobile-link--active">Hobbies</a>
+                    <a href="/contact/contact.html" class="header__mobile-link">Contact</a>
+                </nav>
+            </div>        
 
-        <nav class="navbar">
-            <a href="/index/index.html" class="active">Home</a>
-            <a href="/family/family.html">Family</a>
-            <a href="/education/education.html">Education</a>
-            <a href="/hobbies/hobbies.html">Hobbies</a>
-            <a href="/contact/contact.html">Contact</a> 
-        </nav>
+            <nav class="header__navbar">
+                <a href="/index/index.html" class="header__nav-link">Home</a>
+                <a href="/family/family.html" class="header__nav-link">Family</a>
+                <a href="/education/education.html" class="header__nav-link">Education</a>
+                <a href="/hobbies/hobbies.html" class="header__nav-link header__nav-link--active">Hobbies</a>
+                <a href="/contact/contact.html" class="header__nav-link" >Contact</a>
+            </nav>
+        </div>
     </header>
     <main>
-        <section class="hobby-section">
-            <div class="hobby-card">
-                <img src="assets/cooking.jpg" alt="Cooking" class="hobby-image">
-                <div class="hobby-content">
-                    <h2>Cooking</h2>
-                    <p>I enjoy exploring new recipes and experimenting with different cuisines. Cooking is both a creative outlet and a way to unwind after a long day.</p>
+        <section class="hobbies">
+            <div class="container">
+                <div class="hobbies__container">
+                   <div class="hobbies__top-part">
+                    <div class="hobbies__card">
+                        <img src="assets/cooking-svgrepo-com.svg" alt="Cooking" class="hobbies__image" loading="lazy">
+                        <div class="hobbies__info">
+                            <h3 class="hobbies__title">Cooking</h3>
+                            <p class="hobbies__description">I enjoy experimenting with new recipes and creating delicious meals that bring joy to my family and friends.</p>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="hobbies__center-part">
+                    <div class="hobbies__card">
+                        <img src="assets/icons8-реал-мадрид.svg" alt="Football" class="hobbies__image" loading="lazy">
+                        <div class="hobbies__info">
+                            <h3 class="hobbies__title">Football</h3>
+                            <p class="hobbies__description">Football is not just a game; it’s a passion! I love the thrill of the match and the camaraderie it brings with my teammates.</p>
+                        </div>
+                    </div>
+                    <h2 class="section-heading">My Hobbies</h2>
+                    <div class="hobbies__card">
+                        <img src="assets/anime-and-manga-svgrepo-com (1).svg" alt="Watch Anime" class="hobbies__image" loading="lazy">
+                        <div class="hobbies__info">
+                            <h3 class="hobbies__title">Watch Anime</h3>
+                            <p class="hobbies__description">I love immersing myself in captivating stories and stunning animation, exploring the diverse worlds created by talented artists.</p>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="hobbies__bottom-part">
+                        <div class="hobbies__card">
+                            <img src="assets/south-korea-svgrepo-com.svg" alt="Watch Dorama" class="hobbies__image" loading="lazy">
+                            <div class="hobbies__info">
+                                <h3 class="hobbies__title">Watch Dorama</h3>
+                                <p class="hobbies__description">Dramas take me on emotional journeys through engaging plots and relatable characters, allowing me to escape into different cultures and experiences.</p>
+                            </div>
+                        </div>
+                   </div>
                 </div>
             </div>
-
-            <div class="hobby-card">
-                <img src="assets/anime.jpg" alt="Watching Anime" class="hobby-image">
-                <div class="hobby-content">
-                    <h2>Watching Anime</h2>
-                    <p>Anime has always been a source of inspiration for me. I love the diverse storytelling, animation styles, and the way each series brings something new.</p>
-                </div>
-            </div>
-
-            <div class="hobby-card">
-                <img src="assets/dorama.jpg" alt="Watching Dorama" class="hobby-image">
-                <div class="hobby-content">
-                    <h2>Watching Dorama</h2>
-                    <p>I am a fan of dorama, especially Japanese and Korean dramas. They have unique plots and character development that keep me hooked.</p>
-                </div>
-            </div>
-
-            <div class="hobby-card">
-                <img src="assets/football.jpg" alt="Football" class="hobby-image">
-                <div class="hobby-content">
-                    <h2>Football</h2>
-                    <p>Football is one of my favorite sports. Playing football helps me stay active and I love the teamwork aspect of the game.</p>
-                </div>
-            </div>
-        </section>
+        </section>    
     </main>
-    <footer>
-        <p>&copy; 2024 Nurtas Mukhambetov. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2024 Nurtas Mukhambetov. All rights reserved.</p>
+        </div>
     </footer>
-    
 </body>
 </html>
