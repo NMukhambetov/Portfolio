@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Nurtas Mukhambetov - Computer Science student showcasing skills, family, hobbies, and contact information.">
+    <link rel="stylesheet" href="family.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio - Nurtas Mukhambetov</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <a href="#" class="header__logo">MNM</a>
+            <div class="header__hamburger">
+                <input type="checkbox" class="header__toggler" id="menu-toggle">
+                <label for="menu-toggle" class="header__hamburger-icon" aria-label="Toggle navigation menu">
+                    <img src="assets/hamburger.svg" alt="Hamburger Menu">
+                </label>
+                <nav class="header__mobile-menu" id="mobile-menu">
+                    <a href="/index/index.html" class="header__mobile-link">Home</a>
+                    <a href="/family/family.html" class="header__mobile-link header__mobile-link--active">Family</a>
+                    <a href="/education/education.html" class="header__mobile-link">Education</a>
+                    <a href="/hobbies/hobbies.html" class="header__mobile-link">Hobbies</a>
+                    <a href="/contact/contact.html" class="header__mobile-link">Contact</a>
+                </nav>
+            </div>        
+
+            <nav class="header__navbar">
+                <a href="/index/index.html"  class="header__nav-link">Home</a>
+                <a href="/family/family.html" class="header__nav-link header__nav-link--active">Family</a>
+                <a href="/education/education.html" class="header__nav-link">Education</a>
+                <a href="/hobbies/hobbies.html" class="header__nav-link">Hobbies</a>
+                <a href="/contact/contact.html" class="header__nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section class="family-tree container">
+        <div class="family-tree__generation family-tree__generation--top">
+            <div class="family-tree__member">
+                <img src="assets/father.jpg" alt="Father" class="family-tree__photo">
+                <div class="family-tree__name">Akkairov Murat</div>
+                <div class="family-tree__relation">Father</div>
+            </div>
+            <div class="family-tree__member">
+                <img src="assets/mother.jpg" alt="Mother" class="family-tree__photo">
+                <div class="family-tree__name">Kutisheva Gulshat</div>
+                <div class="family-tree__relation">Mother</div>
+            </div>
+        </div>
+
+        <div class="family-tree__generation family-tree__generation--children">
+            <div class="family-tree__member">
+                <img src="assets/old-sister.jpg" alt="Older Sister" class="family-tree__photo">
+                <div class="family-tree__name">Mukhambetova Amangul</div>
+                <div class="family-tree__relation">Oldest Sister</div>
+            </div>
+            <div class="family-tree__member">
+                <img src="assets/middle-sister.jpg" alt="Middle Sister" class="family-tree__photo">
+                <div class="family-tree__name">Mukhambetova Bakyt</div>
+                <div class="family-tree__relation">Middle Sister</div>
+            </div>
+            <div class="family-tree__member">
+                <img src="assets/young-sister.jpg" alt="Younger Sister" class="family-tree__photo">
+                <div class="family-tree__name">Mukhambetova Zhanylai</div>
+                <div class="family-tree__relation">Youngest Sister</div>
+            </div>
+            <div class="family-tree__member">
+                <img src="assets/me.jpg" alt="You" class="family-tree__photo">
+                <div class="family-tree__name">Mukhambetov Nurtas</div>
+                <div class="family-tree__relation">Me</div>
+            </div>
+            <div class="family-tree__member">
+                <img src="assets/twin.jpg" alt="Twin" class="family-tree__photo">
+                <div class="family-tree__name">Mukhambetov Bektas</div>
+                <div class="family-tree__relation">My Twin</div>
+            </div>
+        </div>
+
+        <div class="family-tree__generation family-tree__generation--inlaws">
+            <div class="family-tree__member">
+                <img src="assets/husband.jpg" alt="Brother-in-law" class="family-tree__photo">
+                <div class="family-tree__name">Koskinbayuly Erzhan</div>
+                <div class="family-tree__relation">Brother-in-law</div>
+            </div>
+            <div class="family-tree__member">
+                <img src="assets/nephew.jpg" alt="Nephew" class="family-tree__photo">
+                <div class="family-tree__name">Erzhanuly Kaisar</div>
+                <div class="family-tree__relation">Nephew</div>
+            </div>
+            <div class="family-tree__member">
+                <img src="assets/niece.jpg" alt="Niece" class="family-tree__photo">
+                <div class="family-tree__name">Erzhankyzy Amira</div>
+                <div class="family-tree__relation">Niece</div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2024 Nurtas Mukhambetov. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -330,7 +330,49 @@ span.location {
 .footer p {
     margin: 0;
 }
+@media (max-width: 1235px) and (min-width:768px) {
+    .header {
+        padding: 15px 5%;
+    }
+    .header__navbar {
+        display: flex; 
+    }
 
+    .header__hamburger {
+        display: none; 
+    }
+
+    .header__mobile-menu {
+        display: none; 
+    }
+}
+@media (max-width: 768px){
+    .header__navbar {
+        display: flex; 
+    }
+
+    .header__hamburger {
+        display: none; 
+    }
+    .navbar a {
+        font-size: 14px;
+        margin-left: 20px;
+    }
+}
+@media (max-width:621px) and (min-width:432px) {
+    .header__navbar {
+        display: none;
+    }
+
+    .header__hamburger {
+        display: flex; 
+    }
+
+    .header__mobile-menu {
+        display: none;
+        flex-direction: column;
+    }
+}
 @media (max-width: 431px){
     .header__navbar {
         display: none; 
